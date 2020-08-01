@@ -50,10 +50,12 @@ CREATE TABLE decisions(
 
 users:{
     userID:random id generator funct
-    name:"",
+    firstName:"",
+    lastName:"",
     username:"",
     pswd:"",
-    isLoggedIn:boolean
+    isLoggedIn:boolean --determines if user can create/vote on poll
+    pollsVotedOn:[pollID, pollID, pollID] --prevents user from voting twice on poll
     polls:[{
         pollID:random id generator funct, --will be used in route to display/share specific poll
         pollTitle:"",
@@ -75,4 +77,5 @@ users:{
             }]
     }]
 }
-
+-- url maybe
+-- root.com/username/polls/pollID --specific pollId
